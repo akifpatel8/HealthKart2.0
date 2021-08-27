@@ -457,7 +457,10 @@ Loginend -->
     <img class="product_image" src=<%= user.img %>></img>
     <p><%= user.name %></p>
     <div class="btn_section">
-    <span><%= user.price %></span></div>
+    <span><%= user.price %></span>
+  <span class="discount"><%= user.discount %></span>
+  <button class="Add">Add</button>
+  </div>
     </div>
     <% }) %>
     
