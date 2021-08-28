@@ -113,3 +113,53 @@ function login() {
 function signup() {
   window.open("../signup/Signup.html");
 }
+var suggest_div = document.getElementById("suggest");
+var timerId;
+async function searchMovies() {
+  // let querryy = document.getElementById("query").value;
+  // if (querryy.length <= 0) {
+  //   return false;
+  // } else {
+  let res = await fetch(`http://localhost:3452/users`);
+  let data = await res.json();
+
+  return data;
+  // }
+}
+function autosuggest() {
+  if (timerId) {
+    return false;
+  }
+
+  timerId = setTimeout(() => {
+    main();
+    timerId = undefined;
+  }, 1000);
+}
+function appendMovies(d) {
+  suggest_div.innerHTML = null;
+  let print_div = document.createElement("div");
+
+  d.forEach(({ name }) => {
+    let search_div = document.createElement("div");
+    let p = document.createElement("span");
+
+    p.innerText = name;
+    search_div.addEventListener("mouseover", function () {
+      search_div.style.background = "Yellow";
+      p.style.color = "black";
+    });
+    search_div.addEventListener("mouseout", function () {
+      search_div.style.background = "rgb(45,47,48)";
+      p.style.color = "Yellow";
+    });
+    search_div.append(p);
+    print_div.append(search_div);
+    suggest_div.append(print_div);
+  });
+}
+
+async function main() {
+  let moviess = await searchMovies();
+  appendMovies(moviess);
+}

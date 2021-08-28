@@ -95,6 +95,11 @@ input {
   margin-bottom: 0;
   font-size: 20px;
 }
+
+.autosuggest {
+  height: 100px;
+  width: 200px;
+}
 .overall {
   width: 76%;
 
@@ -225,9 +230,7 @@ a h1 {
 
 .customer-body-dropdown1 {
   display: flex;
-
 }
-
 
 .input-icons img {
   position: absolute;
@@ -265,8 +268,6 @@ a h1 {
 hr {
   color: E0E0E0;
 }
-
-
 
 #hk_btn,
 #store_btn {

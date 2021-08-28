@@ -15,10 +15,10 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use("/static", express.static(path.join(__dirname, "static")));
 app.use("/users", userController);
-app.use("/sorting",productController)
-app.use("/cart",cartController)
-app.use("/checkout",paymentController)
-app.use("/sucess",sucessController)
+app.use("/sorting", productController);
+app.use("/cart", cartController);
+app.use("/checkout", paymentController);
+app.use("/sucess", sucessController);
 app.listen(3452, async () => {
   await connect();
   console.log("LIstening on port 3452");
