@@ -1,0 +1,16 @@
+.img_item {
+  height: 300px !important;
+}
+.items_pg {
+  margin-left: 300px;
+}
+.parent {
+  display: flex;
+  /* margin: 30px; */
+}
+.text {
+  margin-left: 30px;
+  font-weight: bold;
+  font-size: 23px;
+  width: 600px;
+}
