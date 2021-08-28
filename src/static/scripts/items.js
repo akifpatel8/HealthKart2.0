@@ -59,13 +59,13 @@ function showVisited() {
   p_add.setAttribute("id", "add_box");
   let items_data = JSON.parse(localStorage.getItem("items_added"));
 
-  data_div1.innerHTML = null;
-  data_div2.innerHTML = null;
+  // data_div1.innerHTML = null;
+  // data_div2.innerHTML = null;
   items_data.forEach(function (el) {
     apppendData(el);
   });
 }
-showVisited();
+// showVisited();
 
 function add_to_kart(item) {
   let count = 0;
