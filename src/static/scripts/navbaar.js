@@ -157,11 +157,11 @@ function appendMovies(d) {
   print_div.classList="suggest-box"
   d.forEach(({ name }) => {
     let search_div = document.createElement("div");
+    search_div.addEventListener("click",()=>{
+      window.location.href="https://google.com"
+    })
     let p = document.createElement("span");
-
-    p.innerText = name;
-   
-   
+    p.innerText = name;   
     search_div.append(p);
     print_div.append(search_div);
     suggest_div.append(print_div);

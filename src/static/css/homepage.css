@@ -694,9 +694,17 @@ ul {
 .suggest-box{
   background-color: white;
   padding: 5px;
+  max-height: 200px;
+  overflow: scroll;
 }
 .suggest-box > div{
   /* background-color: white; */
   /* padding: 5px; */
-  margin-top: 100px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.suggest-box > div:hover{
+  color: white;
+  background-color: #00BFBF;
 }
