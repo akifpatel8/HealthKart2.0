@@ -447,7 +447,6 @@ hr {
   background: #f8f8f8;
   width: 100%;
   margin: 0 auto;
-  border: 1px solid black;
 }
 #box1 {
   margin: 10 px;
@@ -464,19 +463,18 @@ hr {
   min-height: 392px;
   width: 100%;
   justify-content: center;
-  border: 1px solid black;
 }
-.each_products {
+#each_products {
   border: 1px solid #e4e3e3;
   margin: 5px;
   border-radius: 5px;
   width: 26%;
   background: white;
 }
-.each_products p {
+#each_products p {
   margin: 10px;
 }
-.each_products span {
+#each_products span {
   margin: 10px;
 }
 .btn_section {

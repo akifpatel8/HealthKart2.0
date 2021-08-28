@@ -2,6 +2,10 @@ const path = require("path");
 const express = require("express");
 const connect = require("./configs/db");
 const userController = require("./controllers/user.control");
+const { EventEmitter } = require("events");
+
+const firstEmitter = new EventEmitter();
+firstEmitter.emit("My first event");
 
 const app = express();
 app.use(express.json());
