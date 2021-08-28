@@ -2,7 +2,9 @@ const path = require("path");
 const express = require("express");
 const connect = require("./configs/db");
 const userController = require("./controllers/user.control");
+
 const productController = require("./controllers/product.controller");
+
 const app = express();
 app.use(express.json());
 app.set("views", path.join(__dirname, "views"));

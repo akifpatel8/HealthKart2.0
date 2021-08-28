@@ -2,6 +2,14 @@ const express = require("express");
 
 const router = express.Router();
 const Item = require("../models/user.models");
+
+// router.get("/kart", async function (req, res) {
+//   const user = await Item.find().lean().exec();
+//   res.render("users/allusers", {
+//     users: user,
+//   });
+// });
+
 router.post("", async function (req, res) {
   const user = await Item.create(req.body);
   return res.send(user);
