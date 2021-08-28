@@ -447,7 +447,7 @@ hr {
   background: #f8f8f8;
   width: 100%;
   margin: 0 auto;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 #box1 {
   margin: 10 px;
@@ -464,7 +464,7 @@ hr {
   min-height: 392px;
   width: 100%;
   justify-content: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 .each_products {
   border: 1px solid #e4e3e3;
@@ -663,6 +663,13 @@ ul {
   top: 44px;
   background: #00afae;
   color: #fff;
+}
+.viewall{
+  color:white;
+  background-color: #00AFAE;
+  border: none;
+  height: 25px;
+  
 }
 .vieww_all {
   margin-left: 1147%;

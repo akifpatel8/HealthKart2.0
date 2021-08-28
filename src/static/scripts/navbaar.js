@@ -1,5 +1,5 @@
-const customerSupport = document.getElementById("customer-head");
-const customerBody = document.getElementById("customer-body");
+var customerSupport = document.getElementById("customer-head");
+var customerBody = document.getElementById("customer-body");
 customerSupport.addEventListener("mouseover", function () {
   customerBody.style.display = "inline";
 });
@@ -16,8 +16,8 @@ customerBody.addEventListener("mouseout", function () {
   customerBody.style.display = "none";
 });
 
-const accountSupport = document.getElementById("account-head");
-const accountBody = document.getElementById("account-body");
+var accountSupport = document.getElementById("account-head");
+var accountBody = document.getElementById("account-body");
 accountSupport.addEventListener("mouseover", function () {
   accountBody.style.display = "inline";
 });
@@ -34,8 +34,8 @@ accountBody.addEventListener("mouseout", function () {
   accountBody.style.display = "none";
 });
 
-const genderSupport = document.getElementById("gender-head");
-const genderBody = document.getElementById("gender-body");
+var genderSupport = document.getElementById("gender-head");
+var genderBody = document.getElementById("gender-body");
 genderSupport.addEventListener("mouseover", function () {
   genderBody.style.display = "inline";
 });
@@ -52,8 +52,8 @@ genderBody.addEventListener("mouseout", function () {
   genderBody.style.display = "none";
 });
 
-const goalSupport = document.getElementById("goal-head");
-const goalBody = document.getElementById("goal-body");
+var goalSupport = document.getElementById("goal-head");
+var goalBody = document.getElementById("goal-body");
 goalSupport.addEventListener("mouseover", function () {
   goalBody.style.display = "inline";
 });
@@ -70,8 +70,8 @@ goalBody.addEventListener("mouseout", function () {
   goalBody.style.display = "none";
 });
 
-const dealsSupport = document.getElementById("deals-head");
-const dealsBody = document.getElementById("deals-body");
+var dealsSupport = document.getElementById("deals-head");
+var dealsBody = document.getElementById("deals-body");
 dealsSupport.addEventListener("mouseover", function () {
   dealsBody.style.display = "inline";
 });

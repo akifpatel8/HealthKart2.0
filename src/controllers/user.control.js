@@ -6,6 +6,9 @@ router.post("", async function (req, res) {
   const user = await Item.create(req.body);
   return res.send(user);
 });
+router.get("/item",async(req,res)=>{
+  res.sendFile()
+})
 router.get("", async function (req, res) {
   const user = await Item.find().lean().exec();
 
@@ -24,6 +27,12 @@ router.get("/web", async function (req, res) {
     users: user,
     img,
   });
+});
+router.get("", async function (req, res) {
+  const user = await Item.find().lean().exec();
+  const img = user.img;
+
+  return res.sendFile("users/product.ejs");
 });
 
 module.exports = router;
