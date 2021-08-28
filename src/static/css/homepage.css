@@ -669,7 +669,7 @@ ul {
   background-color: #00AFAE;
   border: none;
   height: 25px;
-  
+
 }
 .vieww_all {
   margin-left: 1147%;
@@ -689,4 +689,14 @@ ul {
   width: 61px;
   margin-left: 96px;
   border: none;
+}
+
+.suggest-box{
+  background-color: white;
+  padding: 5px;
+}
+.suggest-box > div{
+  /* background-color: white; */
+  /* padding: 5px; */
+  margin-top: 100px;
 }

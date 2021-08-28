@@ -8,7 +8,7 @@ const productController = require("./controllers/product.controller");
 const cartController = require("./controllers/cart.controller");
 const paymentController = require("./controllers/payment.controller");
 const sucessController = require("./controllers/sucess.controller");
-
+const searchController = require("./controllers/searchQuery.controller");
 const app = express();
 app.use(express.json());
 app.set("views", path.join(__dirname, "views"));
@@ -19,6 +19,7 @@ app.use("/sorting", productController);
 app.use("/cart", cartController);
 app.use("/checkout", paymentController);
 app.use("/sucess", sucessController);
+app.use("/users",searchController)
 app.listen(3452, async () => {
   await connect();
   console.log("LIstening on port 3452");
