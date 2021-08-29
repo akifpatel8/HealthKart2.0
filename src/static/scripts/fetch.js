@@ -26,6 +26,7 @@ function showdata(data) {
       () => {
         event.stopPropagation();
         add_to_kart(item);
+        quantity();
       },
       false
     );
@@ -36,7 +37,7 @@ function showdata(data) {
     maindiv.append(minidiv);
   });
 
-  console.log(data);
+  // console.log(data);
 }
 function add_to_items(item) {
   let count = 0;
@@ -84,3 +85,20 @@ function add_to_kart(item) {
 function viewall() {
   window.location.href = "http://localhost:3452/sorting";
 }
+function quantity() {
+  let data_div = JSON.parse(localStorage.getItem("kart"));
+
+  let total_items = data_div?.length;
+
+  //   console.log(total_price);
+  let totalItems = document.createElement("div");
+
+  totalItems.innerHTML = `${total_items}`;
+
+  let cartCount = document.getElementById("cart_count");
+  cartCount.innerHTML = `${total_items}`;
+  cartCount.style.color = "white";
+  return cartCount;
+}
+// quantity();
+// console.log(quantity());

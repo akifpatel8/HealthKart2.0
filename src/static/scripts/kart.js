@@ -10,6 +10,10 @@ function appendProducts(el) {
   let del_btn = document.createElement("button");
   del_btn.innerHTML = "del";
   del.append(del_btn);
+  del.setAttribute("id", "del_btn");
+  del.addEventListener("click", () => {
+    deleteCart(el);
+  });
   let p_price = document.createElement("p");
   p_price.innerHTML = el.price;
   let img = document.createElement("img");
@@ -36,7 +40,23 @@ function showCart() {
   });
 }
 showCart();
+
+//for deleteing
+function deleteCart(el) {
+  let data_div = JSON.parse(localStorage.getItem("kart"));
+  console.log(data_div);
+
+  const item_data = data_div.filter((item) => item._id != el._id);
+
+  localStorage.setItem("kart", JSON.stringify(item_data));
+  showCart();
+  quantity();
+}
+
+//total
+
 function quantity() {
+  // showCart();
   let data_div = JSON.parse(localStorage.getItem("kart"));
   var sum = 0;
   for (var i = 0; i < data_div.length; i++) {
@@ -50,15 +70,20 @@ function quantity() {
   //   console.log(total_price);
   let totalItems = document.createElement("div");
   let totalPrice = document.createElement("div");
+  // totalPrice.innerHTML = null;
   totalItems.innerHTML = `My Cart(${total_items} items)`;
+  // totalItem.innerHTML = null;
+
   totalPrice.innerHTML = `₹${sum}`;
   let proced = document.createElement("div");
   proced.innerHTML = `Proceed to Pay ₹${sum}`;
   let total = document.getElementById("total");
   let final = document.getElementById("final_price");
   let proceed = document.getElementById("proceed");
-  total.append(totalItems);
-  final.append(totalPrice);
-  proceed.append(proced);
+  total.innerHTML = `My Cart(${total_items} items)`;
+  final.innerHTML = `₹${sum}`;
+  // final.innerText = totalPrice;
+  // proceed.createElement("div");
+  proceed.innerHTML = `Proceed to Pay ₹${sum}`;
 }
 quantity();
