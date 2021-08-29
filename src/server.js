@@ -2,9 +2,8 @@ const path = require("path");
 const express = require("express");
 const connect = require("./configs/db");
 const userController = require("./controllers/user.control");
-
+const trendControl = require("./controllers/trend.control");
 const productController = require("./controllers/product.controller");
-
 const cartController = require("./controllers/cart.controller");
 const paymentController = require("./controllers/payment.controller");
 const sucessController = require("./controllers/sucess.controller");
@@ -19,6 +18,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use("/static", express.static(path.join(__dirname, "static")));
 app.use("/users", userController);
+app.use("/trend", trendControl);
 app.use("/sorting", productController);
 app.use("/cart", cartController);
 app.use("/checkout", paymentController);

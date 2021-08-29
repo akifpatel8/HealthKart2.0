@@ -32,7 +32,7 @@ arr_hk.push(i1, i2, i3, i4, i5, i6, i7, i8);
 if (localStorage.getItem("arr_hk") == null) {
   localStorage.setItem("arr_hk", JSON.stringify(arr_hk));
 }
-console.log(arr_hk);
+// console.log(arr_hk);
 function showDatabase(d) {
   let arr_hk = d;
   const div_hk_page = document.getElementById("hk_page");
@@ -47,4 +47,3 @@ function showDatabase(d) {
   });
 }
 showDatabase(JSON.parse(localStorage.getItem("arr_hk")));
-
