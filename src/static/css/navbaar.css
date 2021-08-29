@@ -87,7 +87,7 @@ input {
 #total {
   width: 94%;
   height: 30px;
-  box-shadow: 0 2px 3px rgb(0 0 0 / 16%);
+  box-shadow: 0 2px 9px rgb(0 0 0 / 16%);
   display: block !important;
   font-family: Roboto, sans-serif;
   padding: 25px 23px 18.5px;
@@ -100,10 +100,12 @@ input {
   height: 100px;
   width: 200px;
 }
+
 .overall {
   width: 76%;
-
+  background-color: white;
   margin: 0 auto;
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
   box-shadow: 0 2px 3px rgb(0 0 0 / 16%);

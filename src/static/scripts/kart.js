@@ -8,8 +8,11 @@ function appendProducts(el) {
   p_name.innerHTML = el.name;
   let del = document.createElement("span");
   let del_btn = document.createElement("button");
-  del_btn.innerHTML = "del";
-  del.append(del_btn);
+  let del_icon = document.createElement("img");
+  del_icon.src = "/static/components/delete.png";
+  del_icon.setAttribute("class", "del_icon");
+  del_btn.append(del_icon);
+  del.append(del_icon);
   del.setAttribute("id", "del_btn");
   del.addEventListener("click", () => {
     deleteCart(el);
