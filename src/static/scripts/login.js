@@ -23,7 +23,7 @@ function check() {
       if (arr[i].name == name && arr[i].password == password) {
         flag = true;
 
-        window.location.href = "/homepage/index.html";
+        window.location.href = "/users/web";
         return;
       }
     }
