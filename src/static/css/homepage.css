@@ -7,6 +7,7 @@
 .login-btn {
   background: #04a1a1;
   color: white;
+  
 }
 /* Slider start */
 .slider {
@@ -710,3 +711,7 @@ ul {
   color: white;
   background-color: #00BFBF;
 }
+
+  /* .single-product-box{
+    height: 300px !important;
+  } */

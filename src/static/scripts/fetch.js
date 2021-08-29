@@ -16,15 +16,18 @@ function showTrendingData(data) {
   data.forEach((item) => {
     let minidiv = document.createElement("div");
     minidiv.classList = "col";
+    minidiv.classList = "single-product-box";
     minidiv.innerHTML = `<div class="mini">
         <img src="${item.img}" alt="">
         <h5>${item.name}</h5>
-        <p>${item.price}</p>
-        <p>${item.discount}</p>
+        <span>Mpr - ${item.price}</span>
+        <span style="text-decoration: line-through;">${item.discount}</span>
       </div>`;
     minidiv.addEventListener("click", () => {
       add_to_items(item);
     });
+    let btn_span= document.createElement("span");
+   
     let btn = document.createElement("button");
     btn.innerText = "Add";
     count = 0;
@@ -46,8 +49,8 @@ function showTrendingData(data) {
       },
       false
     );
-
-    minidiv.append(btn);
+    btn_span.append(btn)
+    minidiv.append(btn_span);
     box1.append(minidiv);
   });
 }
@@ -56,10 +59,10 @@ function showdata(data) {
     let minidiv = document.createElement("div");
     minidiv.classList = "col";
     minidiv.innerHTML = `<div class="mini">
-        <img src="${item.img}" alt="">
+        <img src="${item.img}" id="imgg" alt="">
         <h5>${item.name}</h5>
-        <p>${item.price}</p>
-        <p>${item.discount}</p>
+        <span>Mrp -${item.price}</span>
+        <span style="text-decoration: line-through;"> ${item.discount}</span>
       </div>`;
     minidiv.addEventListener("click", () => {
       add_to_items(item);
@@ -85,12 +88,15 @@ function showdata(data) {
       },
       false
     );
+     
+
 
     minidiv.append(btn);
     //   minidiv.addEventListener("click",()=>{
     //       window.location.href="./item"
     //   },false)
     maindiv.append(minidiv);
+    
   });
 
   // console.log(data);
