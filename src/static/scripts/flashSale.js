@@ -1,29 +1,4 @@
-const items = [
-  {
-    name: "MuscleBlaze Super Gainer XXL,  11 lb  Banana ",
-    price: 2999,
-    discount: 5199,
-    img: "https://img2.hkrtcdn.com/12990/prd_1298911-MuscleBlaze-Super-Gainer-XXL-11-lb-Banana_c_s.jpg",
-  },
-  {
-    name: "MuscleBlaze Whey Performance (70%) Protein,  8.8 lb  Chocolate  ",
-    price: 5999,
-    discount: 7999,
-    img: "https://img6.hkrtcdn.com/12134/prd_1213315-MuscleBlaze-Whey-Performance-70-Protein-8.8-lb-Chocolate_c_s.jpg",
-  },
-  {
-    name: "HealthKart Biotin (10000 mcg),  90 tablet(s)  Unflavoured ",
-    price: 499,
-    discount: 1000,
-    img: "https://img10.hkrtcdn.com/15156/prd_1515549-HealthKart-Biotin-10000-mcg-90-tablets-Unflavoured_c_s.jpg",
-  },
-  {
-    name: "Alpino Peanut Butter (Unsweetened),  2.4 kg  Natural Crunch ",
-    price: 799,
-    discount: 949,
-    img: "https://img2.hkrtcdn.com/12714/prd_1271321-Alpino-Peanut-Butter-Unsweetened-2.4-kg-Natural-Crunch_c_s.jpg",
-  },
-];
+
 
 if (localStorage.getItem("items") == null) {
   localStorage.setItem("items", JSON.stringify(items));

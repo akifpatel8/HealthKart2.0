@@ -116,13 +116,6 @@ function signup() {
 var suggest_div = document.getElementById("suggest");
 var timerId;
 
-// async function autosuggest(){
-//   let query=document.getElementById("search-inp").value
-//   let res = await fetch(`http://localhost:3452/users/${query}`);
-//   let data = await res.json();
-  
-// // appendMovies(data)
-// }
 
 
 

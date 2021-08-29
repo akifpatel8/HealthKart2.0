@@ -14,7 +14,7 @@
   margin-left: 10%;
   border: 1px solid #e6e6e6;
   background-color: #fff;
-  background: #f8f8f8 !important;
+  /* background: #f8f8f8 !important; */
 }
 
 .slide_container {
@@ -163,7 +163,8 @@ a h1 {
 }
 
 .input-field {
-  text-align: center;
+  padding-left: 10px;
+  text-align: left;
   background-color: #f7f7f7;
   height: 35px;
   width: 400px;
@@ -466,6 +467,7 @@ hr {
   justify-content: center;
 
 }
+
 #each_products {
   border: 1px solid #e4e3e3;
   margin: 5px;
