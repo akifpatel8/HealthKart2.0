@@ -17,18 +17,28 @@ function showTrendingData(data) {
     let minidiv = document.createElement("div");
     minidiv.classList = "col";
     minidiv.classList = "single-product-box";
-    minidiv.innerHTML = `<div class="mini">
-        <img src="${item.img}" alt="">
-        <h5>${item.name}</h5>
-        <span>Mpr - ${item.price}</span>
-        <span style="text-decoration: line-through;">${item.discount}</span>
-      </div>`;
+    minidiv.setAttribute("class", "mini");
+
+    let img = document.createElement("img");
+    img.src = item.img;
+
+    let heading = document.createElement("h5");
+    heading.innerHTML = item.name;
+
+    let price = document.createElement("span");
+    price.innerHTML = item.price;
+
+    let discount = document.createElement("span");
+    discount.innerHTML = item.discount;
+    discount.setAttribute("class", "discount");
     minidiv.addEventListener("click", () => {
       add_to_items(item);
     });
-    let btn_span= document.createElement("span");
-   
+
+    let btn_span = document.createElement("span");
+
     let btn = document.createElement("button");
+    btn.setAttribute("class","cartbt")
     btn.innerText = "Add";
     count = 0;
     btn.addEventListener(
@@ -49,8 +59,21 @@ function showTrendingData(data) {
       },
       false
     );
-    btn_span.append(btn)
-    minidiv.append(btn_span);
+    btn_span.append(btn);
+    minidiv.append(img, heading, price, discount, btn_span);
+    minidiv.addEventListener("mouseover", function () {
+      btn.style.opacity = 1.0;
+      img.style.opacity = 0.6;
+
+      btn.style.background = "#00c2c1";
+    });
+    minidiv.addEventListener("mouseout", function () {
+      btn.style.opacity = 1.0;
+      img.style.opacity = 1.0;
+
+      btn.style.background = "";
+    });
+
     box1.append(minidiv);
   });
 }
@@ -68,6 +91,7 @@ function showdata(data) {
       add_to_items(item);
     });
     let btn = document.createElement("button");
+    btn.setAttribute("class","cartbtn")
     btn.innerText = "Add";
     count = 0;
     btn.addEventListener(
@@ -92,11 +116,9 @@ function showdata(data) {
 
 
     minidiv.append(btn);
-    //   minidiv.addEventListener("click",()=>{
-    //       window.location.href="./item"
-    //   },false)
-    maindiv.append(minidiv);
     
+    maindiv.append(minidiv);
+
   });
 
   // console.log(data);
