@@ -77,8 +77,10 @@ input {
 }
 .prod_img {
   height: 123px;
-  width: 59%;
+  width: 100%;
+  /* padding: 10px; */
 }
+
 .parent {
   display: flex;
   margin-top: 10px;

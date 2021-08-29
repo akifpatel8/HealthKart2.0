@@ -108,10 +108,10 @@ function myFunction() {
   }
 }
 function login() {
-  window.location.href = "../login/login.html";
+  window.location.href = "http://localhost:3452/login";
 }
 function signup() {
-  window.open("../signup/Signup.html");
+  window.open("http://localhost:3452/signup");
 }
 var suggest_div = document.getElementById("suggest");
 var timerId;

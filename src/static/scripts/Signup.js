@@ -35,6 +35,6 @@ function store() {
     arr.push(userobj);
     localStorage.setItem("user_details", JSON.stringify(arr));
 
-    window.location.href = "/login/login.html";
+    window.location.href = "http://localhost:3452/login";
   }
 }
