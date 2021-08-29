@@ -12,6 +12,7 @@ const searchController = require("./controllers/searchQuery.controller");
 const signupController = require("./controllers/signup.controller");
 const loginController = require("./controllers/login.control");
 
+const itemController = require("./controllers/items.control");
 const app = express();
 app.use(express.json());
 app.set("views", path.join(__dirname, "views"));
@@ -26,6 +27,8 @@ app.use("/users",searchController)
 app.use("/login",loginController)
 app.use("/signup",signupController)
 
+
+app.use("/items", itemController);
 app.listen(3452, async () => {
   await connect();
   console.log("LIstening on port 3452");

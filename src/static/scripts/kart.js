@@ -6,6 +6,10 @@ function appendProducts(el) {
 
   let p_name = document.createElement("span");
   p_name.innerHTML = el.name;
+  let del = document.createElement("span");
+  let del_btn = document.createElement("button");
+  del_btn.innerHTML = "del";
+  del.append(del_btn);
   let p_price = document.createElement("p");
   p_price.innerHTML = el.price;
   let img = document.createElement("img");
@@ -14,7 +18,7 @@ function appendProducts(el) {
   let img_div = document.createElement("div");
 
   let right_text = document.createElement("div");
-  right_text.append(p_name, p_price);
+  right_text.append(p_name, del, p_price);
   right_text.setAttribute("class", "text");
   let parent_div = document.createElement("div");
   parent_div.setAttribute("class", "parent");
@@ -46,7 +50,7 @@ function quantity() {
   //   console.log(total_price);
   let totalItems = document.createElement("div");
   let totalPrice = document.createElement("div");
-  totalItems.innerHTML = `My Cart(${total_items})`;
+  totalItems.innerHTML = `My Cart(${total_items} items)`;
   totalPrice.innerHTML = `₹${sum}`;
   let proced = document.createElement("div");
   proced.innerHTML = `Proceed to Pay ₹${sum}`;

@@ -45,6 +45,7 @@ function showStudents() {
     img.src = el.img;
 
     img.setAttribute("class", "product_image");
+
     img_div.append(img);
     let p_att = document.createElement("span");
     let discount = document.createElement("span");
@@ -101,7 +102,7 @@ function showStudents() {
     });
     img.addEventListener("click", function () {
       addItems(el);
-      window.location.href = "../items/items.html";
+      window.location.href = "https://google.com";
     });
 
     discount.innerHTML = el.discount;
@@ -224,7 +225,27 @@ function showTrending() {
   });
 }
 showTrending();
+function add_to_items(item) {
+  let count = 0;
+  arr = [];
+  let arr;
+  arr = localStorage.getItem("items");
+  if (arr == null) {
+    arr = [];
+  } else {
+    arr = JSON.parse(localStorage.getItem("items"));
+  }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].name === item.name) {
+      alert("Already Added");
+      return;
+    }
+  }
 
+  arr.push(item);
+
+  localStorage.setItem("items", JSON.stringify(arr));
+}
 function add_to_kart(item) {
   let count = 0;
   let arr;
